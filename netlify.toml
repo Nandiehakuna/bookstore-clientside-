@@ -1,4 +1,9 @@
 [build]
-  command = "vite build"
-  publish = "dist"
-  base = "/dist/"  
+  base = "client"
+  command = "npm run build"
+  publish = "client/dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
